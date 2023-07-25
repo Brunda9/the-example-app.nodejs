@@ -1,15 +1,7 @@
-FROM node:9
-
-WORKDIR /app
-
-RUN npm install -g contentful-cli
-
-COPY package.json .
-RUN npm install
-
+FROM node 
+WORKDIR usr/src/app
+COPY package\*.json ./
 COPY . .
-
-USER node
+//RUN npm install
 EXPOSE 3000
-
 CMD ["npm", "run", "start:dev"]
