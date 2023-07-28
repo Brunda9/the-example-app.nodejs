@@ -1,6 +1,8 @@
 FROM node 
-EXPOSE 3001
-WORKDIR /app
+USER root
+WORKDIR usr/src/app
+COPY package\*.json ./
 COPY . .
-RUN chmod 755 -R /app
-CMD ["npm", "run","start:dev"]
+RUN npm install
+EXPOSE 3000
+CMD ["npm", "run", "start:dev"]
