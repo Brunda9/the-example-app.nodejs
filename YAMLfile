@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-brunda1
+  name: nodejs-brunda
   labels:
-    app: node-a
+    app: node-b
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-a
+      app: node-b
   template:
     metadata:
       labels:
-        app: node-a
+        app: node-b
     spec:
       containers:
-      - name: nodejs-brunda1
-        image: gbsartifactory.edst.ibm.com/jenkins-agents/node-brunda:22
+      - name: nodejs-brunda
+        image: gbsartifactory.edst.ibm.com/jenkins-agents/node-brunda:latest
         ports:
-        - containerPort: 3001
+        - containerPort: 3000
+    
     
