@@ -1,8 +1,6 @@
 FROM node 
-USER root
-WORKDIR usr/src/app
-COPY package\*.json ./
-COPY . .
-RUN chmod 755 ./package.json
 EXPOSE 3001
-CMD ["npm", "run"]
+WORKDIR /app
+COPY . .
+RUN chmod 755 -R /app
+CMD ["npm", "start"]
