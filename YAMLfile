@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodejs-brunda
-        image: gbsartifactory.edst.ibm.com/jenkins-agents/node-brunda:latest1
+        image: gbsartifactory.edst.ibm.com/jenkins-agents/node-brunda:latest2
         ports:
         - containerPort: 3000
     
