@@ -1,4 +1,5 @@
 FROM node 
+USER root
 EXPOSE 3000
 WORKDIR usr/src/app
 COPY package*.json ./
